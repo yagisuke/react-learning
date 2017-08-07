@@ -8,6 +8,12 @@ describe('CommentBox' , () => {
     expect(component.find('textarea')).to.exist;
   });
 
+  it('has a comment-test class', () => {
+    const component = renderComponent(CommentBox);
+
+    expect(component.find('textarea')).to.have.class('comment-test');
+  });
+
   it('has a button', () => {
     const component = renderComponent(CommentBox);
 
