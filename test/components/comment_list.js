@@ -1,7 +1,7 @@
 import { renderComponent, expect } from '../test_helper';
 import CommentList from '../../src/components/comment_list';
 
-describe('App' , () => {
+describe('CommentList' , () => {
   let component;
 
   beforeEach(() => {
@@ -10,10 +10,11 @@ describe('App' , () => {
   });
 
   it('shows an Li for each comment', () => {
-
+    expect(component.find('li').length).to.equal(2);
   });
 
   it('shows each comment that is provide', () => {
-
+    expect(component).to.contain('new comment');
+    expect(component).to.contain('other new comment');
   });
 });
