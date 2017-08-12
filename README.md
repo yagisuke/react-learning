@@ -1,2 +1,2 @@
 # 内容
-- testing...
+- testing: Unit testing with mocha & chai
