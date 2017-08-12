@@ -3,10 +3,12 @@ import jquery from 'jquery';
 import TestUtils from 'react-addons-test-utils';
 import ReactDOM from 'react-dom';
 import { expect } from 'chai';
-import React from 'ract';
+import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from '../src/reducers';
+import chai from 'chai';
+import chaiJquery from 'chai-jquery';
 
 // set up testing enviroment to run like a browser in the command line
 global.document = jsdom.jsdom('<!doctype html><html><body></body></html>');
@@ -21,7 +23,7 @@ function renderComponent(ComponentClass, props, state) {
     </Provider>
   );
 
-  return $(ReactDOM.findDoMNode(componentInstance)); // produces html
+  return $(ReactDOM.findDOMNode(componentInstance)); // produces html
 }
 
 // build helper for simulating events
@@ -29,6 +31,9 @@ $.fn.simulate = function(eventName, value) {
   if (value) this.val(value);
 
   TestUtils.Simulate[eventName](this[0]);
-}
+};
+
+// set up chai-jquery
+chaiJquery(chai, chai.util, $);
 
 export { renderComponent, expect };
