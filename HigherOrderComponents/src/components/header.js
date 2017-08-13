@@ -9,15 +9,17 @@ class Header extends Component {
   render() {
     return (
       <nav className="navbar navbar-light">
-        <li className="nav-item">
-          <Link to="/">HOME</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/resources">Resources</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/">{ this.authBUtton() }</Link>
-        </li>
+        <ul className="nav navbar-nav">
+          <li className="nav-item">
+            <Link to="/">HOME</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/resources">Resources</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/">{ this.authBUtton() }</Link>
+          </li>
+        </ul>
       </nav>
     );
   };
