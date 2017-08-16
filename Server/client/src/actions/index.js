@@ -11,8 +11,9 @@ export function signinUser({ email, password }){
       .then(response => {
         // if request is good...
         // - update state to indicate user is authenticated
-        dispatch({ tpe: AUTH_USER });
+        dispatch({ type: AUTH_USER });
         // - save the jwt token
+        localStorage.setItem('token', response.data.token);
         // - redirect to the route '/feature'
         browserHistory.push('/feature');
       })
