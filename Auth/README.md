@@ -2,14 +2,14 @@
 ```
 1, mongodb の起動
 (mongodbはbrewでインストールした)
-cd Server
+cd Auth
 mongod
 
 2, web server の起動
-cd Server
+cd Auth
 npm run dev
 
 3, front server の起動
-cd Server/client
+cd Auth/client
 npm run start
 ```
