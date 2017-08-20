@@ -1,4 +1,4 @@
-# 使い方
+# usage
 ```
 1, mongodb の起動
 (mongodbはbrewでインストールした)
