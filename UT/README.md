@@ -1,4 +1,4 @@
-# 使い方
+# usage
 ```
 cd UT
 npm install
